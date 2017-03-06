@@ -1,0 +1,22 @@
+<script>
+$(document).ready(function(){
+  $("#test").hide();
+  $("p").click(function(){
+         $("#test").toggle();
+    });
+   });
+</script>
+<%= link_to "New User", new_user_path %>
+<p> Existing User</p>
+
+<div id="test">
+<%=  form_tag :controller=>"entries", :action=>"search", :method=> "get" do %>
+  <div class="field">
+    <%= label_tag :emp_id, "Employee ID" %><br />
+    <%= text_field_tag :emp_id %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Search" %>
+  </div>
+<% end %>
+</div>

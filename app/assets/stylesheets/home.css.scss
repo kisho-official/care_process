@@ -1,0 +1,46 @@
+#home-menu{
+width: 500px;
+position: fixed;
+text-align: center;
+margin: 150px auto auto 350px;
+}
+.entry{
+
+float:left;
+}
+.exit{
+
+float:right;
+}
+
+#header{
+height: 50px;
+border-bottom: 2px ridge brown;
+}
+
+#content-body{
+overflow: scroll;
+overflow-x: hidden;
+height: 775px;
+text-align: center;
+
+}
+
+#user_nav{
+float: right;
+width: 8em;
+}
+
+
+#footer{
+height: 50px;
+border-top: 2px ridge brown;
+position: fixed;
+bottom: 10px;
+width: 99%;
+}
+
+.extra{
+width: 50px;
+border: 2px ridge brown;
+}

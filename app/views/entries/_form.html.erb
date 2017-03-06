@@ -1,0 +1,72 @@
+<div class="formtag">
+<%= form_tag({:controller => "entries", :action => "update"}, {:multipart=> "true"}) do %>
+
+
+      <div>
+      <%=  hidden_field_tag 'emp_id', @details.emp_id %>
+      </div>
+      <div class="field">
+        <%= label_tag :tower, "Tower" %>
+        <p><%= select_tag :tower,  options_for_select([ "CRM", "ERP", "PLM", "CARE", "COF" ], @details.tower) %></p>
+      </div>
+      <div class="field">
+        <%= label_tag :location, "Location" %>
+        <p><%= select_tag :location,  options_for_select([ "Siruseri, Chennai"], @details.location) %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :odc_location, "ODC Location" %>
+        <p><%= select_tag :odc_location,  options_for_select([ "EB5 NW 5th Floor", "EB5 NW 7th Floor", "EB5 NW Ground Floor" ], @details.odc_location) %></p>
+      </div>
+        <div class="field">
+         <%= label_tag :tcs_bgc, "TCS BGC" %></br>
+         <p><%= file_field_tag :tcs_bgc, :value=>@details.tcs_bgc %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :nda, "NDA" %>
+        <p><%= text_field_tag :nda, @details.nda %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :security_session, "Security Session" %>
+        <p><%= select_tag :security_session,  options_for_select([ "Yes", "No"], @details.security_session) %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :mmo_bgc, "MMO BGC" %>
+        <p><%= text_field_tag :mmo_bgc, @details.mmo_bgc %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :physical_access, "Physical Access" %>
+        <p><%= text_field_tag :physical_access, @details.physical_access %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :logical_access, "Logical Access" %>
+        <p><%= text_field_tag :logical_access, @details.logical_access %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :mailing_group, "Mailing Group" %>
+        <p><%= text_field_tag :mailing_group, @details.mailing_group %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :mmo_id, "MMO ID" %>
+       <p> <%= text_field_tag :mmo_id, @details.mmo_id %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :laptop, "Laptop" %>
+        <p><%= text_field_tag :laptop, @details.laptop %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :application_access, "Application Access" %>
+        <p><%= text_field_tag :application_access, @details.application_access %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :smart_card, "Smart Card" %>
+        <p><%= text_field_tag :smart_card, @details.smart_card %></p>
+      </div>
+        <div class="field">
+        <%= label_tag :elearning, "E-Learning" %>
+        <p><%= text_field_tag :elearning, @details.elearning %></p>
+      </div>
+
+<div class="button"><%= submit_tag "Submit" %></div>
+<% end %>
+
+</div>

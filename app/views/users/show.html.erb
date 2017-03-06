@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Employee ID:</b>
+  <%= @user.emp_id %>
+</p>
+<p>
+  <b>Employee Name:</b>
+  <%= @user.emp_name%>
+</p>
+<p>
+  <b>Card Number:</b>
+  <%= @user.card_no %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+
+
+<div class="extra"><%= link_to 'Edit', edit_user_path(@user) %> </div>
+<%= link_to 'Back', users_path %>

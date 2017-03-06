@@ -1,0 +1,28 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#login{
+
+    height: 900px;
+    background-image: url("cool.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#login-form{
+
+  font-size: 150%;
+  color: beige;
+  line-height: 25px;
+  position: fixed;
+  bottom: 50%;
+  right: 45%;
+  width: auto;
+  background-blend-mode: multiply;
+}
+#content{
+
+height: 775px;
+text-align: center;
+
+}

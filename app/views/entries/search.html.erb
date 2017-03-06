@@ -1,0 +1,38 @@
+<% if @details.tower.blank? %>
+            <div class="formtag">
+            <%= render 'form' %>
+            </div>
+<%else%>
+        <div class="formtag">
+              <div class="field">Employee Id        :<%= @user.emp_id %></div>
+              <div class="field">Name               : <%= @user.emp_name %></div>
+              <div class="field">Card number        : <%= @user.card_no %></div>
+              <div class="field">Email              : <%= @user.email %></div>
+              <div class="field">Tower : <%= @details.tower %></div>
+              <div class="field">Location : <%= @details.location %> </div>
+              <div class="field">ODC Location : <%= @details.odc_location %> </div>
+              <div class="field">TCS BGC : <%= @details.tcs_bgc %> </div>
+              <div class="field">NDA : <%= @details.nda %> </div>
+              <div class="field">Security Session : <%= @details.security_session %></div>
+              <div class="field">MMO BGC : <%= @details.mmo_bgc %> </div>
+              <div class="field">Physical Address : <%= @details.physical_access %> </div>
+              <div class="field">Logical Address : <%= @details.logical_access %> </div>
+              <div class="field">Mailing Group : <%= @details.mailing_group %> </div>
+              <div class="field">MMO ID : <%= @details.mmo_id %> </div>
+              <div class="field">Laptop : <%= @details.laptop %> </div>
+              <div class="field">Application Access : <%= @details.application_access %> </div>
+              <div class="field">Smart Card : <%= @details.smart_card %> </div>
+              <div class="field">eLearning : <%= @details.elearning %> </div>
+
+              <%= link_to 'Edit', edit_entry_path(@details.id) %>
+        </div>
+<% end %>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+
+
+<div id="login">
+  <div id="login-form">
+
+      <%= form_tag sessions_path do %>
+        <div>
+          <%= label_tag :email %><br />
+          <%= text_field_tag :email, params[:email], :placeholder => "...email..." %>
+        </div>
+        <div>
+          <%= label_tag :password %><br />
+          <%= password_field_tag :password %>
+        </div>
+        <div><%= submit_tag "Log in", :style => "background-color:beige;width:174px;color:black;padding: 2px;" %></div>
+      <% end %>
+  </div>
+</div>

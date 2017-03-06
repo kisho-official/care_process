@@ -1,0 +1,21 @@
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+});
+</script>
+
+
+
+<div id="home-menu">
+  <div class="entry">
+    <%= link_to image_tag("enter3.jpg"), entries_path %>
+    <br>Entry Process
+  </div>
+  <div class="exit">
+    <%= link_to image_tag("exit3.jpg"), exits_path %>
+    <br>Exit Process
+  </div>
+</div>
+

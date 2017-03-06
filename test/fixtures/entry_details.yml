@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  emp_id: MyString
+  tower: MyString
+  location: MyString
+  odc_location: MyString
+  tcs_bgc: MyString
+  nda: MyString
+  security_session: MyString
+  mmo_bgc: MyString
+  physical_access: MyString
+  logical_access: MyString
+  mailing_group: MyString
+  mmo_id: MyString
+  laptop: MyString
+  application_access: MyString
+  smart_card: MyString
+  elearning: MyString
+
+two:
+  user_id: 1
+  emp_id: MyString
+  tower: MyString
+  location: MyString
+  odc_location: MyString
+  tcs_bgc: MyString
+  nda: MyString
+  security_session: MyString
+  mmo_bgc: MyString
+  physical_access: MyString
+  logical_access: MyString
+  mailing_group: MyString
+  mmo_id: MyString
+  laptop: MyString
+  application_access: MyString
+  smart_card: MyString
+  elearning: MyString
