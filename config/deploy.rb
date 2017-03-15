@@ -1,13 +1,28 @@
-require 'capistrano/ext/multistage'
+#require 'capistrano/ext/multistage'
 
 set :stages, ["development", "production", "test"]
 set :default_stage, "development"
 # config valid only for current version of Capistrano
-lock "3.7.2"
+lock "3.4.0"
 
 set :application, "care_process"
+set :ssh_options, {
+  forward_agent: true,
+  #verbose: :debug,
+  keys: %w(C:/Users/Kisho/Documents/Rails/care_process/filename.key)
+}
+set :log_level, :info
+set :scm,  :git
 set :repo_url, "https://github.com/kisho-official/care_process"
 set :user, "kisho.official@gmail.com"
+
+namespace :deploy do
+  task :start_server do
+    on roles(:app) do
+      execute "rails server"
+    end
+    end
+  end
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

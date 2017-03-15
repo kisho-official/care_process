@@ -7,7 +7,7 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server "caerprocess.cloudapp.net", :app :primary => true
+server "caerprocess.cloudapp.net",   user: 'kisho',  roles: %w{app}
 set :deploy_to, "/var/care_process_test"
 
 # role-based syntax
