@@ -8,7 +8,7 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 server "caerprocess.cloudapp.net", :app :primary => true
-set :deploy_to, "/var/care_process_production"
+set :deploy_to, "/var/care_process_test"
 
 # role-based syntax
 # ==================
