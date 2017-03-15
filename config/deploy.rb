@@ -18,12 +18,14 @@ set :user, "kisho.official@gmail.com"
 
 namespace :deploy do
   task :start_server do
-    on roles(:app) do
-      execute "rails server"
+    on 'caerprocess.cloudapp.net' do
+      within "/var/care_process_#{rails_env}"
+      execute :rails, "server"
     end
     end
+  task :start do ; end
   end
-
+after "deploy:start", "deploy:start_server"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
