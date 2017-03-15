@@ -1,11 +1,16 @@
 CareProcess::Application.routes.draw do
+
+
+    resources :api
+
+  
   get "exit/index"
 
   #get "entry/index"
   match 'home' => 'home#index'
   match 'home/doc_download' => 'home#doc_download'
   match 'home/bgc_download' => 'home#bgc_download'
-  
+
 
   
   root :to => "sessions#new"
