@@ -11,21 +11,35 @@ set :ssh_options, {
   #verbose: :debug,
   keys: %w(C:/Users/Kisho/Documents/Rails/care_process/filename.key)
 }
-set :log_level, :info
+set :log_level, :debug
+#set :default_env, { path: "$PATH" }
 set :scm,  :git
 set :repo_url, "https://github.com/kisho-official/care_process"
 set :user, "kisho.official@gmail.com"
 
+
+
+pid_file = "/home/kisho/server.pid"
 namespace :deploy do
-  task :start_server do
-    on 'caerprocess.cloudapp.net' do
-      within "/var/care_process_#{rails_env}"
-      execute :rails, "server"
-    end
-    end
-  task :start do ; end
+  
+  task :start do
+    on roles(:app) do
+        execute "cd #{deploy_to}/current && rails server" 
+      end
   end
-after "deploy:start", "deploy:start_server"
+
+
+  task :stop do
+    execute  "kill -s QUIT `cat #{pid_file}`" if File.exists?(pid_file)
+  end
+
+  task :restart do
+    stop
+    sleep 2
+    start
+  end
+end
+#after "deploy:start", "deploy:start_server"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
