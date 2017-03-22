@@ -1,7 +1,8 @@
 module Jobs
   class NotifyNewUser
       def perform
-      puts "HELLOOOOOOOOOOOOOOOOOOOO"
+        @user = User.all
+        UserNotificationMailer.user_notification_email(@user).deliver
       end
 
       def notify_new

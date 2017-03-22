@@ -49,7 +49,7 @@ class UsersController < ApplicationController
         user = EntryDetail.create!(:emp_id=>params[:user][:emp_id])
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
-        
+        UserNotificationMailer.user_notification_email(@user).deliver
         
         #jb = Jobs::NotifyNewUser.new
         #jb.delay.notify_new
