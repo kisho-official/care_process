@@ -28,6 +28,8 @@ gem 'daemons'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'capistrano'
 gem 'capistrano-ext'
+gem 'activerecord-sqlserver-adapter'
+gem 'ruby-odbc'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
