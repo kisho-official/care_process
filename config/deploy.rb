@@ -3,7 +3,7 @@
 set :stages, ["development", "production", "test"]
 set :default_stage, "development"
 # config valid only for current version of Capistrano
-lock "3.4.0"
+lock "3.7.2"
 
 set :application, "care_process"
 set :ssh_options, {
