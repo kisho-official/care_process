@@ -12,6 +12,7 @@
   </tr>
 
 <% @users.each do |user| %>
+  <% cache(:action => 'index', :action_suffix => 'all_users') do %>
   <tr>
     <td><%= user.emp_id %></td>
     <td><%= user.emp_name %></td>
@@ -22,6 +23,7 @@
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+  <%end%>
 </table>
 
 <br />
